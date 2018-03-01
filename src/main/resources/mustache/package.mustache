@@ -1,0 +1,19 @@
+{
+  "name": "{{{projectName}}}-api",
+  "version": "0.0.1",
+  "description": "{{{projectDescription}}}",{{#projectLicenseName}}
+  "license": "{{{projectLicenseName}}}",{{/projectLicenseName}}
+  "main": "{{sourceFolder}}{{#invokerPackage}}/{{invokerPackage}}{{/invokerPackage}}/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive"
+  },
+  "dependencies": {
+    "superagent": "git+https://github.com/faresd/superagent.git#appsscript"
+
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}

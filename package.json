@@ -1,0 +1,8 @@
+{
+  "name": "swagger-apis",
+  "version": "0.0.1",
+  "description": "APIs",
+  "dependencies": {
+    "api-name": "file:./api-name",
+  }
+}

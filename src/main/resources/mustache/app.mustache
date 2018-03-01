@@ -1,0 +1,25 @@
+(function(factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['Index'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // CommonJS-like environments that support module.exports, like Node.
+        module.exports = factory(require('./src/index.js'));
+    }
+}(function(index) {
+
+    var resources = {};
+    for (var funktionName in index) {
+        var pattern = /.*Api$/
+        if(pattern.test(funktionName)) {
+            var resource = new index[funktionName]
+            for (var itemKey in resource) {
+                resource[itemKey]["apiClient"] = resource.apiClient
+                if(itemKey !== "apiClient") resources[itemKey] = resource[itemKey]
+            }
+        }
+    }
+
+    resources.models = index;
+    return resources;
+}))

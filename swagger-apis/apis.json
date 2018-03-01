@@ -1,0 +1,10 @@
+{
+  "created" : "2016-06-02",
+  "specificationVersion" : "0.15",
+  "apisList" : [ {
+    "name" : "apiName",
+    "description" : "description",
+    "baseURL" : "https://url/apis/apiName/v1",
+    "version" : "v1"
+  } ]
+}

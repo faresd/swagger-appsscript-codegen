@@ -1,0 +1,17 @@
+(function(factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define([{{#apisList}}'/{{dashedName name}}-api'{{#unless @last}}, {{/unless}}{{/apisList}}], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // CommonJS-like environments that support module.exports, like Node.
+        module.exports = factory({{#apisList}}require('/{{dashedName name}}-api'){{#unless @last}}, {{/unless}}{{/apisList}});
+    }
+}(function({{#apisList}}{{name}}{{#unless @last}}, {{/unless}}{{/apisList}}) {
+    var apis = {
+        {{#each apisList}}
+            {{name}}: {{name}}{{#unless @last}},{{/unless}}
+        {{/each}}
+    }
+
+    return apis;
+}));

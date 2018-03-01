@@ -1,0 +1,4 @@
+{
+  "path": "bundles",
+  "fileId": "${appsscript.project.id}"
+}

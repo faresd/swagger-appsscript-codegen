@@ -1,0 +1,11 @@
+{
+  "name": "swagger-appsscript-library",
+  "description": "{{description}}",
+  "version": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    {{#apisList}}
+        "{{name}}-api": "file:./{{name}}-api"{{#unless @last}},{{/unless}}
+    {{/apisList}}
+  }
+}
