@@ -1,4 +1,4 @@
-# Swagger Codegen for the appsscript library
+# Swagger Codegen for the Google Apps Script (GAS)
 
 
 ## What's Swagger?
